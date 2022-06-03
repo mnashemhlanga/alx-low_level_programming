@@ -1,15 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * main -Lanzador.
+ *
+ * Return: Always 0.
  */
+
 int main(void)
 {
-	char c;
+	char a = 'a';
 
-	for (c = 'a'; c <= 'z', c++)
-		putchar(c);
+	for (a = 'a'; a <= 'z'; a++)
+	{
+		putchar(a);
+	}
 	putchar('\n');
 	return (0);
 }
