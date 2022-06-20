@@ -1,1 +1,1 @@
-More pointers, arrays and strings in C
+Pointers to pointers and multi dimensional arrays in C
