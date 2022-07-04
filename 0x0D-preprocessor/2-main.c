@@ -1,9 +1,7 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
 /**
- * main - Entry Point
- * Return: 0
+ * main - Print the the name of the file it was compiled from.
+ * Return: success (0).
  */
 
 int main(void)
