@@ -1,25 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 /**
- * list_len - function that returns number of elements in a linked list_t 
- * @h: This is the sigle list
- * Return: The number of elements in a linked list_t list
+ * add_node - Add new node to a linked list.
+ * @head: head of the linked list.
+ * @str: string to add.
+ * Return: pointer of the new element added to linked list.
  */
-
-size_t list_len(const list_t *h)
+list_t *add_node(list_t **head, const char *str)
 {
-	int count = 0;
+	list_t *new;
 
-	if (h == NULL)
-		return (0);
-	while (h != NULL)
-	{
-		count += 1;
-		h = h->next;
-	}
-	return (count);
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	new->next = *head;
+	*head = new;
+	return (new);
+}
+/**
+ * _strlen - Calculate lenght of a string.
+ * @s: string.
+ * Return: lenght of the string s.
+ */
+int _strlen(const char *s)
+{
+	int idx = 0;
+
+	for (; s[idx]; idx++)
+	;
+	return (idx);
 }
 
-
-	
-
-	
