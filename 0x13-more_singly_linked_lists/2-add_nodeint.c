@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * add_nodeint - adds new node to beginning of linked list
  * @head: input head of linked list
@@ -18,5 +19,4 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	*head = new_node;
 	return (new_node);
 }
-
 
